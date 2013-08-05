@@ -1,0 +1,411 @@
+l,r,idx=1,14,1
+l,r,idx=1,7,2
+l,r,idx=1,4,4
+l,r,idx=1,2,8
+l,r,idx=2,4,9
+l,r,idx=2,3,18
+l,r,idx=3,4,19
+l,r,idx=4,7,5
+l,r,idx=4,5,10
+l,r,idx=5,7,11
+l,r,idx=5,6,22
+l,r,idx=6,7,23
+l,r,idx=7,14,3
+l,r,idx=7,10,6
+l,r,idx=7,8,12
+l,r,idx=8,10,13
+l,r,idx=8,9,26
+l,r,idx=9,10,27
+l,r,idx=10,14,7
+l,r,idx=10,12,14
+l,r,idx=10,11,28
+l,r,idx=11,12,29
+l,r,idx=12,14,15
+l,r,idx=12,13,30
+l,r,idx=13,14,31
+h,l=25,-6,e.y1,e.y2=0,10
+mid=10,e.y1=0,y2=10
+h,l=10,-6,e.y1,e.y2=0,10
+mid=0,e.y1=0,y2=10
+h,l=0,-6,e.y1,e.y2=0,10
+mid=-4,e.y1=0,y2=10
+h,l=-4,-6,e.y1,e.y2=0,10
+h,l=0,-4,e.y1,e.y2=0,10
+mid=0,e.y1=0,y2=10
+h,l=0,-4,e.y1,e.y2=0,10
+h,l=0,0,e.y1,e.y2=0,10
+flag=1,l,r=0,0
+flag=0,l,r=-4,0
+here modify nums:1
+flag=0,l,r=-6,0
+here modify nums:1
+h,l=10,0,e.y1,e.y2=0,10
+flag=1,l,r=0,10
+flag=0,l,r=-6,10
+here modify nums:1
+flag=0,l,r=-6,25
+here modify nums:1
+last,numbers=10,1
+h,l=25,-6,e.y1,e.y2=8,25
+mid=10,e.y1=8,y2=25
+h,l=10,-6,e.y1,e.y2=8,25
+mid=0,e.y1=8,y2=25
+h,l=10,0,e.y1,e.y2=8,25
+mid=4,e.y1=8,y2=25
+h,l=10,4,e.y1,e.y2=8,25
+mid=8,e.y1=8,y2=25
+h,l=8,4,e.y1,e.y2=8,25
+h,l=10,8,e.y1,e.y2=8,25
+flag=1,l,r=8,10
+flag=0,l,r=4,10
+here modify nums:1
+flag=1,l,r=0,10
+flag=0,l,r=-6,10
+here modify nums:1
+h,l=25,10,e.y1,e.y2=8,25
+flag=1,l,r=10,25
+flag=0,l,r=-6,25
+here modify nums:1
+last,numbers=25,1
+h,l=25,-6,e.y1,e.y2=-6,4
+mid=10,e.y1=-6,y2=4
+h,l=10,-6,e.y1,e.y2=-6,4
+mid=0,e.y1=-6,y2=4
+h,l=0,-6,e.y1,e.y2=-6,4
+flag=1,l,r=-6,0
+h,l=10,0,e.y1,e.y2=-6,4
+mid=4,e.y1=-6,y2=4
+h,l=4,0,e.y1,e.y2=-6,4
+flag=1,l,r=0,4
+h,l=10,4,e.y1,e.y2=-6,4
+mid=8,e.y1=-6,y2=4
+h,l=8,4,e.y1,e.y2=-6,4
+flag=0,l,r=4,10
+here modify nums:1
+flag=1,l,r=0,10
+flag=0,l,r=-6,10
+here modify nums:1
+flag=0,l,r=-6,25
+here modify nums:1
+last,numbers=31,1
+h,l=25,-6,e.y1,e.y2=15,22
+mid=10,e.y1=15,y2=22
+h,l=10,-6,e.y1,e.y2=15,22
+mid=0,e.y1=15,y2=22
+h,l=10,0,e.y1,e.y2=15,22
+mid=4,e.y1=15,y2=22
+h,l=10,4,e.y1,e.y2=15,22
+mid=8,e.y1=15,y2=22
+h,l=10,8,e.y1,e.y2=15,22
+flag=0,l,r=4,10
+here modify nums:1
+flag=1,l,r=0,10
+flag=0,l,r=-6,10
+here modify nums:1
+h,l=25,10,e.y1,e.y2=15,22
+mid=15,e.y1=15,y2=22
+h,l=25,15,e.y1,e.y2=15,22
+mid=20,e.y1=15,y2=22
+h,l=25,20,e.y1,e.y2=15,22
+mid=22,e.y1=15,y2=22
+h,l=25,22,e.y1,e.y2=15,22
+flag=0,l,r=20,25
+here modify nums:0
+flag=0,l,r=15,25
+here modify nums:0
+flag=1,l,r=10,25
+flag=0,l,r=-6,25
+here modify nums:1
+last,numbers=31,1
+h,l=25,-6,e.y1,e.y2=0,10
+mid=10,e.y1=0,y2=10
+h,l=10,-6,e.y1,e.y2=0,10
+mid=0,e.y1=0,y2=10
+h,l=0,-6,e.y1,e.y2=0,10
+mid=-4,e.y1=0,y2=10
+h,l=-4,-6,e.y1,e.y2=0,10
+h,l=0,-4,e.y1,e.y2=0,10
+mid=0,e.y1=0,y2=10
+h,l=0,-4,e.y1,e.y2=0,10
+h,l=0,0,e.y1,e.y2=0,10
+flag=0,l,r=0,0
+flag=0,l,r=-4,0
+here modify nums:0
+flag=1,l,r=-6,0
+h,l=10,0,e.y1,e.y2=0,10
+flag=0,l,r=0,10
+here modify nums:2
+flag=0,l,r=-6,10
+here modify nums:2
+flag=0,l,r=-6,25
+here modify nums:2
+last,numbers=27,2
+h,l=25,-6,e.y1,e.y2=15,22
+mid=10,e.y1=15,y2=22
+h,l=10,-6,e.y1,e.y2=15,22
+mid=0,e.y1=15,y2=22
+h,l=10,0,e.y1,e.y2=15,22
+mid=4,e.y1=15,y2=22
+h,l=10,4,e.y1,e.y2=15,22
+mid=8,e.y1=15,y2=22
+h,l=10,8,e.y1,e.y2=15,22
+flag=0,l,r=4,10
+here modify nums:1
+flag=0,l,r=0,10
+here modify nums:2
+flag=0,l,r=-6,10
+here modify nums:2
+h,l=25,10,e.y1,e.y2=15,22
+mid=15,e.y1=15,y2=22
+h,l=25,15,e.y1,e.y2=15,22
+mid=20,e.y1=15,y2=22
+h,l=25,20,e.y1,e.y2=15,22
+mid=22,e.y1=15,y2=22
+h,l=25,22,e.y1,e.y2=15,22
+flag=0,l,r=20,25
+here modify nums:0
+flag=0,l,r=15,25
+here modify nums:0
+flag=1,l,r=10,25
+flag=0,l,r=-6,25
+here modify nums:2
+last,numbers=27,2
+h,l=25,-6,e.y1,e.y2=-4,14
+mid=10,e.y1=-4,y2=14
+h,l=10,-6,e.y1,e.y2=-4,14
+mid=0,e.y1=-4,y2=14
+h,l=0,-6,e.y1,e.y2=-4,14
+mid=-4,e.y1=-4,y2=14
+h,l=-4,-6,e.y1,e.y2=-4,14
+h,l=0,-4,e.y1,e.y2=-4,14
+flag=1,l,r=-4,0
+flag=1,l,r=-6,0
+h,l=10,0,e.y1,e.y2=-4,14
+flag=1,l,r=0,10
+flag=0,l,r=-6,10
+here modify nums:1
+flag=0,l,r=-6,25
+here modify nums:1
+last,numbers=31,1
+h,l=25,-6,e.y1,e.y2=-6,4
+mid=10,e.y1=-6,y2=4
+h,l=10,-6,e.y1,e.y2=-6,4
+mid=0,e.y1=-6,y2=4
+h,l=0,-6,e.y1,e.y2=-6,4
+flag=0,l,r=-6,0
+here modify nums:1
+h,l=10,0,e.y1,e.y2=-6,4
+mid=4,e.y1=-6,y2=4
+h,l=4,0,e.y1,e.y2=-6,4
+flag=0,l,r=0,4
+h,l=10,4,e.y1,e.y2=-6,4
+mid=8,e.y1=-6,y2=4
+h,l=8,4,e.y1,e.y2=-6,4
+flag=0,l,r=4,10
+here modify nums:1
+flag=1,l,r=0,10
+flag=0,l,r=-6,10
+here modify nums:1
+flag=0,l,r=-6,25
+here modify nums:1
+last,numbers=29,1
+h,l=25,-6,e.y1,e.y2=8,25
+mid=10,e.y1=8,y2=25
+h,l=10,-6,e.y1,e.y2=8,25
+mid=0,e.y1=8,y2=25
+h,l=10,0,e.y1,e.y2=8,25
+mid=4,e.y1=8,y2=25
+h,l=10,4,e.y1,e.y2=8,25
+mid=8,e.y1=8,y2=25
+h,l=8,4,e.y1,e.y2=8,25
+h,l=10,8,e.y1,e.y2=8,25
+flag=0,l,r=8,10
+flag=0,l,r=4,10
+here modify nums:0
+flag=1,l,r=0,10
+flag=0,l,r=-6,10
+here modify nums:1
+h,l=25,10,e.y1,e.y2=8,25
+flag=0,l,r=10,25
+here modify nums:0
+flag=0,l,r=-6,25
+here modify nums:1
+last,numbers=14,1
+h,l=25,-6,e.y1,e.y2=-4,14
+mid=10,e.y1=-4,y2=14
+h,l=10,-6,e.y1,e.y2=-4,14
+mid=0,e.y1=-4,y2=14
+h,l=0,-6,e.y1,e.y2=-4,14
+mid=-4,e.y1=-4,y2=14
+h,l=-4,-6,e.y1,e.y2=-4,14
+h,l=0,-4,e.y1,e.y2=-4,14
+flag=0,l,r=-4,0
+here modify nums:0
+flag=0,l,r=-6,0
+here modify nums:0
+h,l=10,0,e.y1,e.y2=-4,14
+flag=0,l,r=0,10
+here modify nums:0
+flag=0,l,r=-6,10
+here modify nums:0
+flag=0,l,r=-6,25
+here modify nums:0
+last,numbers=0,0
+h,l=25,-6,e.y1,e.y2=10,20
+mid=10,e.y1=10,y2=20
+h,l=10,-6,e.y1,e.y2=10,20
+mid=0,e.y1=10,y2=20
+h,l=10,0,e.y1,e.y2=10,20
+mid=4,e.y1=10,y2=20
+h,l=10,4,e.y1,e.y2=10,20
+mid=8,e.y1=10,y2=20
+h,l=8,4,e.y1,e.y2=10,20
+h,l=10,8,e.y1,e.y2=10,20
+flag=0,l,r=4,10
+here modify nums:0
+flag=0,l,r=0,10
+here modify nums:0
+flag=0,l,r=-6,10
+here modify nums:0
+h,l=25,10,e.y1,e.y2=10,20
+mid=15,e.y1=10,y2=20
+h,l=25,15,e.y1,e.y2=10,20
+mid=20,e.y1=10,y2=20
+h,l=25,20,e.y1,e.y2=10,20
+mid=22,e.y1=10,y2=20
+h,l=25,22,e.y1,e.y2=10,20
+flag=0,l,r=20,25
+here modify nums:0
+flag=0,l,r=15,25
+here modify nums:0
+flag=0,l,r=10,25
+here modify nums:0
+flag=0,l,r=-6,25
+here modify nums:0
+last,numbers=0,0
+h,l=25,-6,e.y1,e.y2=0,16
+mid=10,e.y1=0,y2=16
+h,l=10,-6,e.y1,e.y2=0,16
+mid=0,e.y1=0,y2=16
+h,l=0,-6,e.y1,e.y2=0,16
+mid=-4,e.y1=0,y2=16
+h,l=-4,-6,e.y1,e.y2=0,16
+h,l=0,-4,e.y1,e.y2=0,16
+mid=0,e.y1=0,y2=16
+h,l=0,-4,e.y1,e.y2=0,16
+h,l=0,0,e.y1,e.y2=0,16
+flag=1,l,r=0,0
+flag=0,l,r=-4,0
+here modify nums:1
+flag=0,l,r=-6,0
+here modify nums:1
+h,l=10,0,e.y1,e.y2=0,16
+flag=1,l,r=0,10
+flag=0,l,r=-6,10
+here modify nums:1
+h,l=25,10,e.y1,e.y2=0,16
+mid=15,e.y1=0,y2=16
+h,l=15,10,e.y1,e.y2=0,16
+flag=1,l,r=10,15
+h,l=25,15,e.y1,e.y2=0,16
+mid=20,e.y1=0,y2=16
+h,l=20,15,e.y1,e.y2=0,16
+mid=16,e.y1=0,y2=16
+h,l=16,15,e.y1,e.y2=0,16
+flag=1,l,r=15,16
+h,l=20,16,e.y1,e.y2=0,16
+flag=0,l,r=15,20
+here modify nums:1
+h,l=25,20,e.y1,e.y2=0,16
+mid=22,e.y1=0,y2=16
+h,l=22,20,e.y1,e.y2=0,16
+h,l=25,22,e.y1,e.y2=0,16
+flag=0,l,r=20,25
+here modify nums:0
+flag=0,l,r=15,25
+here modify nums:1
+flag=0,l,r=10,25
+here modify nums:1
+flag=0,l,r=-6,25
+here modify nums:1
+last,numbers=16,1
+h,l=25,-6,e.y1,e.y2=10,20
+mid=10,e.y1=10,y2=20
+h,l=10,-6,e.y1,e.y2=10,20
+mid=0,e.y1=10,y2=20
+h,l=10,0,e.y1,e.y2=10,20
+mid=4,e.y1=10,y2=20
+h,l=10,4,e.y1,e.y2=10,20
+mid=8,e.y1=10,y2=20
+h,l=8,4,e.y1,e.y2=10,20
+h,l=10,8,e.y1,e.y2=10,20
+flag=0,l,r=4,10
+here modify nums:0
+flag=1,l,r=0,10
+flag=0,l,r=-6,10
+here modify nums:1
+h,l=25,10,e.y1,e.y2=10,20
+mid=15,e.y1=10,y2=20
+h,l=25,15,e.y1,e.y2=10,20
+mid=20,e.y1=10,y2=20
+h,l=25,20,e.y1,e.y2=10,20
+mid=22,e.y1=10,y2=20
+h,l=25,22,e.y1,e.y2=10,20
+flag=0,l,r=20,25
+here modify nums:0
+flag=0,l,r=15,25
+here modify nums:1
+flag=0,l,r=10,25
+here modify nums:1
+flag=0,l,r=-6,25
+here modify nums:1
+last,numbers=16,1
+h,l=25,-6,e.y1,e.y2=0,16
+mid=10,e.y1=0,y2=16
+h,l=10,-6,e.y1,e.y2=0,16
+mid=0,e.y1=0,y2=16
+h,l=0,-6,e.y1,e.y2=0,16
+mid=-4,e.y1=0,y2=16
+h,l=-4,-6,e.y1,e.y2=0,16
+h,l=0,-4,e.y1,e.y2=0,16
+mid=0,e.y1=0,y2=16
+h,l=0,-4,e.y1,e.y2=0,16
+h,l=0,0,e.y1,e.y2=0,16
+flag=0,l,r=0,0
+flag=0,l,r=-4,0
+here modify nums:0
+flag=0,l,r=-6,0
+here modify nums:0
+h,l=10,0,e.y1,e.y2=0,16
+flag=0,l,r=0,10
+here modify nums:0
+flag=0,l,r=-6,10
+here modify nums:0
+h,l=25,10,e.y1,e.y2=0,16
+mid=15,e.y1=0,y2=16
+h,l=15,10,e.y1,e.y2=0,16
+flag=0,l,r=10,15
+here modify nums:0
+h,l=25,15,e.y1,e.y2=0,16
+mid=20,e.y1=0,y2=16
+h,l=20,15,e.y1,e.y2=0,16
+mid=16,e.y1=0,y2=16
+h,l=16,15,e.y1,e.y2=0,16
+flag=0,l,r=15,16
+h,l=20,16,e.y1,e.y2=0,16
+flag=0,l,r=15,20
+here modify nums:0
+h,l=25,20,e.y1,e.y2=0,16
+mid=22,e.y1=0,y2=16
+h,l=22,20,e.y1,e.y2=0,16
+h,l=25,22,e.y1,e.y2=0,16
+flag=0,l,r=20,25
+here modify nums:0
+flag=0,l,r=15,25
+here modify nums:0
+flag=0,l,r=10,25
+here modify nums:0
+flag=0,l,r=-6,25
+here modify nums:0
+last,numbers=0,0
+212
