@@ -48,8 +48,6 @@ void update(int idx,Line e){
 		return;
 	}
 	//point!!!!!
-	//int mid = (nodes[idx].h+nodes[idx].l)>>1;
-//	double mid = nodes[idx<<1].h;
 	if(e.y2<=nodes[idx<<1].h)
 		update(idx<<1,e);
 	else if(e.y1>=nodes[idx<<1|1].l)
@@ -65,6 +63,9 @@ void update(int idx,Line e){
 	}
 	calLen(idx);
 }
+/*
+在建树过程中，利用的是端点进行建树，而不是区间来建树。
+*/
 void build(int lIdx,int rIdx,int idx){
 	nodes[idx].h = y[rIdx];
 	nodes[idx].l = y[lIdx];
