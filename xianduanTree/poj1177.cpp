@@ -14,7 +14,7 @@ Line lines[MAXL*2];
 typedef struct Node{
 	int h,l;
 	int hLoc,lLoc;
-	int nums;//区间分段数字,[1,2][4,5]为两个区间，而[1,2],[2,3]为一个区间
+	int nums;//区间分段数,[1,2][4,5]为两个区间，而[1,2],[2,3]为一个区间
 	int rb; //右端点覆盖情况
 	int lb;//左端点覆盖情况
 	int length; //记录区间的长度
@@ -41,6 +41,7 @@ void calLen(int idx){
 		nodes[idx].length = nodes[idx<<1].length+nodes[idx<<1|1].length;
 		nodes[idx].rb = nodes[idx<<1|1].rb;
 		nodes[idx].lb= nodes[idx<<1].lb;
+		//个人感觉nums是这道题区别与面积计算的关键。
 		nodes[idx].nums=nodes[idx<<1].nums+nodes[idx<<1|1].nums-nodes[idx<<1].rb*nodes[idx<<1|1].lb;
 	}
 }
