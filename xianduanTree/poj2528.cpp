@@ -60,6 +60,7 @@ void insert(int idx,int l,int r,int color){
 		insert(2*idx+1,mid,r,color);
 	}
 }
+//坐标离散化
 int preProcess(int * arr,int k,int n){
 	sort(arr,arr+k,cmp);
 	int prev = -1;
