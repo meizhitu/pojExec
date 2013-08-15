@@ -3,3 +3,6 @@ Permutation Sequence
 求矩形最大面积的
 First Missing Positive
 Next Permutation 
+最长的不含重复字母的子串
+罗马数字和数字的转换
+求回文子串长度的O(n)算法

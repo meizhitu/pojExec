@@ -19,8 +19,6 @@ bool isMatch(const char *s, const char *p) {
 				while(*p=='*')
 					p++;
 				if(!(*p))return true;
-		//		p--;
-		//		str--;
 				s = str;
 				str = s-1;
 				ptr = p-1;
@@ -43,6 +41,6 @@ bool isMatch(const char *s, const char *p) {
 	return *ptr=='\0';
 }
 int main(){
-	cout<<isMatch("abce","abc*??")<<endl;
+	cout<<isMatch("aab","c*a*b")<<endl;
 
 }
