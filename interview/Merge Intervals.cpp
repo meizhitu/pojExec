@@ -5,6 +5,9 @@ Given a collection of intervals, merge all overlapping intervals.
 Given [1,3],[2,6],[8,10],[15,18],
 return [1,6],[8,10],[15,18].
 	*/
+#include <iostream>
+#include <vector>
+	using namespace std;
 typedef struct Interval {
 	int start;
 	int end;
@@ -30,7 +33,7 @@ vector<Interval> insert(vector<Interval> &intervals, Interval newInterval) {
 		}
 		else{
 			int s = min(newI.start,intervals[i].start);
-			int e = min(newI.end,intervals[i].end);
+			int e = max(newI.end,intervals[i].end);
 			newI.start = s;
 			newI.end = e;
 			ret.push_back(newI);
@@ -44,4 +47,15 @@ vector<Interval> merge(vector<Interval> &intervals) {
 		ret = insert(ret,intervals[i]);
 	}
 	return ret;
+}
+int main(){
+	vector<Interval> intervals;
+	Interval *i1 = new Interval(1,4);
+	Interval *i2 = new Interval(1,5);
+	intervals.push_back(*i1);
+	intervals.push_back(*i2);
+	
+	vector<Interval> inns = merge(intervals);
+	for(int i = 0;i<inns.size();i++)
+		cout <<inns[i].start<<" "<<inns[i].end<<endl;
 }
