@@ -25,32 +25,26 @@ int maxIns(int a,int b)
 	return a>b?a:b;
 }
 //注意负数情况
-int compute(TreeNode * node,int * max){
+int compute(TreeNode * node,int * maxV){
 	if(node==NULL) return 0;
 	if(node->left == NULL && node->right == NULL){
-		if(*max < node->val)
-			* max = node->val;
+		if(*maxV < node->val)
+			* maxV = node->val;
 		return node->val;
 	}
-	int left = compute(node->left,max);
-	//cout <<"left "<<left<<" max "<<*max<<endl;
-	int right = compute(node->right,max);
-	//cout <<"right "<<right<<" max "<<*max<<endl;
+	int left = compute(node->left,maxV);
+	int right = compute(node->right,maxV);
 	int val = node->val;
 	//将左右枝和left-sub->node->right-sub分开计算。
-	if(maxIns(left,right)>0)
-		val +=maxIns(left,right);
+	if(max(left,right)>0)
+		val +=max(left,right); //从节点到左枝或右枝的最大长度，不包括跨越根节点的情况。
 	int leftRight = node->val;
 	if(node->left)
 		leftRight+= (node->left)->val;
 	if(node->right)
 		leftRight += (node->right)->val; 
-	//cout <<"lf "<<leftRight<<endl;
-	// = (node->right)->val+node->val+node->left->val;
-	if(*max < leftRight)
-		*max = leftRight;
-	if(*max < val)
-		*max = val;
+	//最大值不一定需要跨越根节点，可以从任意节点到任意另一节点，所有需要把max放在整个计算中更新。
+	*maxV = max(max(leftRight,val),*maxV);
 	node->val = val;
 	return val;
 }

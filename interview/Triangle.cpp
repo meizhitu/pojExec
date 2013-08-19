@@ -10,6 +10,7 @@ For example, given the following triangle
   [4,1,8,3]
 ]
 */
+	  //dp
 #include <iostream>
 #include <vector>
 using namespace std;  
@@ -24,7 +25,6 @@ int minimumTotal(vector<vector<int> > &triangle) {
 	for(int i=1;i<=n;i++)
 		for(int j = 1;j<=i;j++){
 			dp[i][j] = min(dp[i-1][j-1],dp[i-1][j])+triangle[i-1][j-1];
-	//		cout <<"tri "<<triangle[i-1][j-1]<<" "<<dp[i][j] <<endl;
 		}
 		
 	int min = 1000000;

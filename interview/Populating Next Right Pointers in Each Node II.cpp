@@ -15,7 +15,8 @@ void connect(TreeLinkNode *root) {
 	if(root==NULL)return;
 	vector<TreeLinkNode*> que;
   	que.push_back(root);
-	//最大的问题在于如何确定每一层的结束位置，这里设置了NULL作为标志位。
+	//最大的问题在于如何确定每一层的结束位置，这里设置了NULL作为标志位。这道题的解答同样可以解答
+	//Populating Next Right Pointers in Each Node这个。
 	que.push_back(NULL);
 	int head = 0;
  
@@ -27,7 +28,7 @@ void connect(TreeLinkNode *root) {
 			if(node->right) que.push_back(node->right);
 			node->next = que[head];
 		}
-		else{
+		else{//如果队列首位是NULL，则表示树的上一层全部入队。
 			if(head>=que.size())break;
 			//标志前一层的结束，同时也标志着下一层的节点全部录入到que里。
 			que.push_back(NULL);

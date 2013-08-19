@@ -23,22 +23,18 @@ typedef struct TreeNode {
 	TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 }TreeNode;
 
-bool dfs(TreeNode * node,int sum,map<int,bool> &visited,int pathSum){
+bool dfs(TreeNode * node,int sum,int pathSum){
 	if(node == 0) return false;
 	if(node->left == 0 && node->right == 0) return  sum == pathSum+node->val;
 	pathSum += node->val;
-	//cout <<pathSum <<endl;
-	if(dfs(node->left,sum,visited,pathSum))return true;
-	if(dfs(node->right,sum,visited,pathSum))return true;
-		//pathSum -= node->val
+	if(dfs(node->left,sum,pathSum))return true;
+	if(dfs(node->right,sum,pathSum))return true;
 	return false;
 }
 bool hasPathSum(TreeNode *root, int sum) {
-	//if(root == NULL && sum ==0) return true;
 	//根据题目的oj，如果树空，sum==0，返回false；
 	if(root == 0) return false; 
-	map<int,bool> visited;
-    return dfs(root,sum,visited,0);
+    return dfs(root,sum,0);
 }
 int main(){
 	TreeNode root(1);

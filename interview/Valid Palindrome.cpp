@@ -11,6 +11,7 @@ Have you consider that the string might be empty? This is a good question to ask
 For the purpose of this problem, we define empty string as valid palindrome.
 
 */
+	//仅仅判断字符串中的字母和数字是否能构成回文串。
 #include <iostream>
 #include <string>
 using namespace std;

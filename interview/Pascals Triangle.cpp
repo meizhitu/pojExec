@@ -18,28 +18,28 @@ vector<int> rowS;
  ]
  */
 	  ;
-  vector<vector<int> > generate(int numRows) {
-	  // Start typing your C/C++ solution below
-	  // DO NOT write int main() function
-	  numRows++;
-	  ret.clear();
-	  if(numRows == 0) return ret;
-	  vector<int> row1;
-	  row1.push_back(1);
-	  ret.push_back(row1);
-	  for(int i = 2;i<=numRows;i++){
-		  vector<int> row;
-		  for(int j = 1;j<=i;j++)
-		  {
-			  if(j==1) row.push_back(1);
-			  else if(j == i) row.push_back(1);
-			  else
-				  row.push_back(ret[i-2][j-1]+ret[i-2][j-2]);
-		  }
-		  ret.push_back(row);
+vector<vector<int> > generate(int numRows) {
+  // Start typing your C/C++ solution below
+  // DO NOT write int main() function
+  numRows++;
+  ret.clear();
+  if(numRows == 0) return ret;
+  vector<int> row1;
+  row1.push_back(1);
+  ret.push_back(row1);
+  for(int i = 2;i<=numRows;i++){
+	  vector<int> row;
+	  for(int j = 1;j<=i;j++)
+	  {
+		  if(j==1) row.push_back(1);
+		  else if(j == i) row.push_back(1);
+		  else
+			  row.push_back(ret[i-2][j-1]+ret[i-2][j-2]);
 	  }
-	  return ret;
+	  ret.push_back(row);
   }
+  return ret;
+}
  /*
  Given an index k, return the kth row of the Pascal's triangle.
 
@@ -54,7 +54,6 @@ vector<int> rowS;
 	 if(rowIndex==0) return vector<int>();
 	 int dp[2][rowIndex+1];
 	 rowS.clear();
-	// memset(dp,0,sizeof(dp));
 	 dp[1][1] = 1;
 	 for(int i=1;i<=rowIndex;i++)
 		 for(int j = 1;j<=i;j++)
@@ -62,7 +61,7 @@ vector<int> rowS;
 		 if(j==1) dp[i%2][j]=1;
 		 else if(j==i)dp[i%2][j] =1;
 		 else
-		 	dp[i%2][j]=dp[(i-1)%2][j]+dp[(i-1)%2][j-1];
+			 dp[i%2][j]=dp[(i-1)%2][j]+dp[(i-1)%2][j-1];
 	 }
 	 
 	 for(int i=1;i<=rowIndex;i++)
@@ -70,7 +69,7 @@ vector<int> rowS;
 		 rowS.push_back(dp[rowIndex%2][i]);
 	 }
 	 return rowS;
-}
+ }
 int main(){
 	vector<vector<int> > n = generate(4);
 	for(vector<vector<int> >::iterator it = n.begin();it!=n.end();it++)

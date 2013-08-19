@@ -12,16 +12,16 @@ The longest consecutive elements sequence is [1, 2, 3, 4]. Return its length: 4.
 
 Your algorithm should run in O(n) complexity.
 */
+//题目的意思是乱序的一个数组，求出连续子序列的最大长度
+//将出现的所有数字存入hash中，然后从一个点开始，分别向上向下寻找最大的长度。
 int countConse(map<int,int> &m,int num,bool asc){
 	int count = 0 ;
-	
 	while(m.count(num)>0){
-		m.erase(num);
+		m.erase(num);//免得重复计算
 		count ++;		
 		if(asc) num --;
 		else num ++;
 	}
-	
 	return count;
 }
 int longestConsecutive(vector<int> &num) {

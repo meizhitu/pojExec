@@ -14,7 +14,8 @@ TreeNode* compute(TreeNode * node){
 	if(node == 0 ) return 0;
 	if(node->left==0 && node->right==0) return node;
 	TreeNode * rightC = node->right;
-	node->right = compute(node->left);
+	//node的右节点接上左枝的前序遍历的根节点
+	node->right = compute(node->left); 
 	node->left = 0;
 	TreeNode * p = node;
 	//此处之前做错，需要把指针移动到右侧最尾处，接上原右枝的扁平化链表。
@@ -27,8 +28,6 @@ TreeNode* compute(TreeNode * node){
 }
  void flatten(TreeNode *root) {
 	 if(root == 0) return ;
-	 //visit self
-	 //visit self->left
 	 compute(root);
  }
  //中序检查结果。

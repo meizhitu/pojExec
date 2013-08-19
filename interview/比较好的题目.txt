@@ -2,7 +2,14 @@ Largest Rectangle in Histogram
 Permutation Sequence
 求矩形最大面积的
 First Missing Positive
+Binary Tree Maximum Path Sum
 Next Permutation 
 最长的不含重复字母的子串
 罗马数字和数字的转换
 求回文子串长度的O(n)算法
+Longest Consecutive Sequence
+Best Time to Buy and Sell Stock1,2,3
+Populating Next Right Pointers in Each Node II
+Distinct Subsequences
+Convert Sorted List to Binary Search Tree
+ValidateBinarySearchTree

@@ -36,7 +36,7 @@ bool helper(TreeNode *root, int min, int max){
 	{
 		return true;
 	}
-       
+	//这个地方写的很巧妙
 	if(root->val > min && root->val<max 
 		&& helper(root->left,min,root->val)
 			&& helper(root->right,root->val,max))

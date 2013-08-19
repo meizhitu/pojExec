@@ -1,4 +1,4 @@
-//我觉得这题聽无聊的
+//我觉得这题挺无聊的
 vector<TreeNode *> generateTrees(int n) {   
 	if(n ==0) return *generate(1,0);  
 	return *generate(1, n);  

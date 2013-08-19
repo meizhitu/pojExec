@@ -28,7 +28,7 @@ void dfs (string& s, int start, vector<string> palinStr)
 	for(int i = start; i < s.size(); i++)
 	{
 		if(palin[start][i])
-		{
+		{	//试探i+1，不行就回退
 			palinStr.push_back(s.substr(start, i - start + 1));
 			dfs(s, i+1, palinStr);
 			palinStr.pop_back();
@@ -40,13 +40,14 @@ vector<vector<string> > partition(string s) {
 	// DO NOT write int main() function
 	if(s.size() == 0)
 		return vector<vector<string> >();
-	int leng = s.size();
-	for(int i = 0; i < leng; i++)
-		for(int j = 0; j < leng; j++)
+	int len = s.size();
+	for(int i = 0; i < len; i++)
+		for(int j = 0; j < len; j++)
 			palin[i][j] = false;
-	for(int interval=0;interval<leng;interval++)
+	//要牢记先计算每个位置的一个interval，否则出错。
+	for(int interval=0;interval<len;interval++)
 	{
-		for(int i = 0;i<leng&&(i+interval)<leng;i++)
+		for(int i = 0;i<len&&(i+interval)<len;i++)
 		{
 			if(interval ==0) palin[i][i+interval] = true;
 			else if(s[i]==s[i+interval]&&(interval==1 || palin[i+1][i+interval-1]))

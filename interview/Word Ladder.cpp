@@ -17,10 +17,11 @@ int ladderLength(string start, string end, unordered_set<string> &dict)
 	queToPop.push(start);
 	while (dict.size() > 0 && !queToPop.empty())
 	{
+		//对BFS每一层的每一个string，分别替换各个位的字符。
 		while (!queToPop.empty())
 		{
 			string str(queToPop.front()); //!!!how to initialize the str
-			queToPop.pop(); //!!! should pop after it is used up
+			queToPop.pop(); //弹出该层的字符串
 			for (int i = 0; i < str.size(); i++)
 			{
 				for (char j = 'a'; j <= 'z'; j++)
@@ -40,8 +41,8 @@ int ladderLength(string start, string end, unordered_set<string> &dict)
 				}
 			}
 		}
-		swap(queToPush, queToPop); //!!! how to use swap
-		distance++;
+		swap(queToPush, queToPop); 
+		distance++; //到下一层
 	} //end while
 	return 0; //all the dict words are used up and we do not find dest word
 } //end function

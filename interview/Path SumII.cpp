@@ -33,11 +33,10 @@ void dfs(TreeNode * node,int sum,int pathSum,vector<int> path){
 		ret.push_back(path);
 		return;
 	}	
-	pathSum += node->val;
 	//深搜是个试探的过程。
 	path.push_back(node->val);
-	dfs(node->left,sum,pathSum,path);
-	dfs(node->right,sum,pathSum,path);
+	dfs(node->left,sum,pathSum+node->val,path);
+	dfs(node->right,sum,pathSum+node->val,path);
 	//试探结束后，要回退。
 	path.pop_back();
 }

@@ -10,7 +10,6 @@ typedef struct TreeNode {
 }TreeNode;
 TreeNode * compute(vector<int> &inorder,int s,int e, vector<int> &postorder,int idx)
 {
-	//cout <<"idx "<<idx<<endl;
 	if(idx<0) return 0;
 	if(s>e) return 0;
 	cout <<postorder[idx]<<endl;

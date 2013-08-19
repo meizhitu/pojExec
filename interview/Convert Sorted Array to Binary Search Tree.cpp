@@ -2,7 +2,7 @@
 #include <vector>
 
 using namespace std;
-
+//把一个有序数组变成一颗平衡二叉树。每次取中间的节点作为当前子树的根节点。
 typedef struct TreeNode {
 	int val;
 	TreeNode *left;
@@ -22,7 +22,6 @@ TreeNode *sortedArrayToBST(vector<int> &num) {
        // Start typing your C/C++ solution below
        // DO NOT write int main() function
 	if(num.size()==0) return NULL;
-	
 	return build(0,num.size()-1,num);
 }
 

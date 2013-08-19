@@ -6,15 +6,15 @@ Given a 2D board containing 'X' and 'O', capture all regions surrounded by 'X'.
 		For example,
 
 X X X X
-	X O O X
-		X X O X
-			X O X X
-				After running your function, the board should be:
+X O O X
+X X O X
+X O X X
+After running your function, the board should be:
 
 X X X X
-	X X X X
-		X X X X
-			X O X X
+X X X X
+X X X X
+X O X X
 				*/
 #include <iostream>
 #include <vector>
@@ -23,7 +23,7 @@ using namespace std;
 //
 //ooox
 //xxxx
-
+//一个DFS
 void solve(vector<vector<char> > &board) {
 	// Start typing your C/C++ solution below
 	// DO NOT write int main() function
@@ -31,7 +31,7 @@ void solve(vector<vector<char> > &board) {
 	if (N == 0) return;
 	int M = board[0].size();
 	if (M == 0) return;
-	vector<vector<bool> > mark(N, vector<bool>(M, false));
+	vector<vector<bool> > visited(N, vector<bool>(M, false));
        
 	int dx[4] = {-1, 1, 0, 0};//上下左右四个方向
 	int dy[4] = {0, 0, -1, 1};
@@ -39,16 +39,18 @@ void solve(vector<vector<char> > &board) {
 	for (int i = 0; i < N; i++)
 		for (int j = 0; j < M; j++)
 	{
-		
-		if (!mark[i][j] && board[i][j] == 'O')
+		//以(i,j)为起点进行BFS
+		if (!visited[i][j] && board[i][j] == 'O')
 		{
 			vector<int> queX, queY;//遍历路径
 			queX.push_back(i);
 			queY.push_back(j);
 			
 			int head = 0;
-			bool result = !(i == 0 || j == 0 || i == N - 1 || j == M - 1) ;//是否在边界以内
-            mark[i][j] = true;
+			//是否在边界以内:如果在边界上，则不需要visitedX
+			bool needMarkX = !(i == 0 || j == 0 || i == N - 1 || j == M - 1) ;
+            visited[i][j] = true;
+			//即使出发点在边界上，也需要进行BFS，找出所有不需要markX的节点。
 			while (head < queX.size())
 			{
 				int nx = queX[head];
@@ -61,19 +63,22 @@ void solve(vector<vector<char> > &board) {
 					int nextY = ny + dy[i];
 					if (nextX >= 0 && nextX < N && nextY >= 0 && nextY < M)
 					{
-						if (!mark[nextX][nextY] && board[nextX][nextY] == 'O')
+						if (!visited[nextX][nextY] && board[nextX][nextY] == 'O')
 						{
+							//(i,j)可以到达的坐标，如果存在一个点在边界上，
+							//则修改needMarkX为false，表示queX,queY中所有坐标均不需要mark
 							queX.push_back(nextX);
 							queY.push_back(nextY);
-							mark[nextX][nextY] = true;
+							visited[nextX][nextY] = true;
 							if (nextX == 0 || nextY == 0 || nextX == N - 1 || nextY == M - 1) //遍历到了边界
-								result = false;
+								needMarkX = false;
 						}
 					}
 				}
 			}
-			if (result)
+			if (needMarkX)
 			{
+				//将所能到达的路径均mark X
 				for (int i = 0; i < queX.size(); i++)
 					board[queX[i]][queY[i]] = 'X';
 			}

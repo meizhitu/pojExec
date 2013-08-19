@@ -8,11 +8,12 @@ S = "rabbbit", T = "rabbit"
 
 Return 3.
 */
+//求S中T的构成组合数。动态规划。
 #include <iostream>
 #include <string>
 	using namespace std;
 int numDistinct1(string S, string T){
-	//动态规划 dp[i][j]:T中前i个字符出现在S前j个字符的次数
+	//动态规划 dp[i][j]:T中前i个字符出现在S前j个字符中的次数
 	int t = T.size();
 	int s = S.size();
 	if(t>s) return 0;
@@ -32,12 +33,17 @@ int numDistinct1(string S, string T){
 			dp[i][j] = dp[i][j-1]+dp[i-1][j-1];
 			
 		}
-		else
+		else //如果不想等，则前i个字符只能出现在前j-1个字符里。
 			dp[i][j] = dp[i][j-1];
 	}
 	return dp[t][s];
 }
 //01背包的处理策略
+//动态规划 dp[i][j]:T前j个字出现在S中前i个字符的次数。
+//dp[i][j] = dp[i-1][j]+dp[i-1][j-1]; 如果s[i]==T[j]
+//         = dp[i-1][j];如果不等，
+//这样就可以使用一维数组减小空间复杂度了。m[j] = m[j]+m[j-1](j从len往0遍历) 如果s[i]==T[j]
+//否则m[j]不变;
 int numDistinct(string S, string T) {
 	// Start typing your C/C++ solution below
 	// DO NOT write int main() function
@@ -47,14 +53,17 @@ int numDistinct(string S, string T) {
 	for(int i=1; i <= T.size(); i++)  
 		match[i] = 0;  
 	for(int i=1; i<= S.size(); i ++)  
-		for(int j =T.size(); j>=1; j--)  
+		for(int j =T.size(); j>=1; j--){
 			if(S[i-1] == T[j-1])  
-				match[j]+= match[j-1];  
+				match[j]+= match[j-1];
+			cout <<j<<" "<<match[j]<<endl;
+		}
+			  
 	return match[T.size()];  
 }
    int main(){
 	   string s = "ccc";
 	   string t = "c";
-	   cout <<numDistinct1(s,t)<<endl;
+	   cout <<numDistinct(s,t)<<endl;
    
    }
