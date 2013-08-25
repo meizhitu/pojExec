@@ -1,3 +1,4 @@
+//矩形的面积计算
 #include <iostream>
 #include <stdio.h>
 #include <algorithm>
@@ -43,8 +44,6 @@ void update(int idx,Line e){
 		return;
 	}
 	//point!!!!!
-	//int mid = (nodes[idx].h+nodes[idx].l)>>1;
-//	double mid = nodes[idx<<1].h;
 	if(e.y2<=nodes[idx<<1].h)
 		update(idx<<1,e);
 	else if(e.y1>=nodes[idx<<1|1].l)

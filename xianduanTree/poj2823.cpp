@@ -1,4 +1,5 @@
 //线段树，太猥琐了！
+//求区间内的最大值最小值，可以使用RMQ或者单调数列。
 //11943067	momoliu	2823	Accepted	39892K	9391MS	C++	2251B	2013-08-08 13:41:05
 #include <stdio.h>
 #include <stdlib.h>
@@ -33,39 +34,26 @@ void build(int l,int h,int idx){
 }
 int queryMin(int l,int h,int idx){
 	if(tree[idx].l==l &&tree[idx].h==h)
-	{
 		//此处找错找了半天，如果需要返回就要清晰的写上return，否则会出现莫名其妙的错误。
  		return tree[idx].min;
-	}
 	int mid = (tree[idx].l+tree[idx].h)>>1;
- 	if(h<=mid){
+ 	if(h<=mid)
  		return queryMin(l,h,idx<<1);
-	}
-	else if(l>mid){		
- 
+	else if(l>mid)
 		return queryMin(l,h,idx<<1|1);
-	
-	}
-	else{
+	else
 		return min(queryMin(l,mid,idx<<1),queryMin(mid+1,h,idx<<1|1));
-	}	
-	 
 }
 int queryMax(int l,int h,int idx){
 	if(tree[idx].l==l &&tree[idx].h==h)
-	{
 		return tree[idx].max;
-	}
 	int mid = (tree[idx].l+tree[idx].h)>>1;
-	if(h<=mid){
+	if(h<=mid)
 		return queryMax(l,h,idx<<1);
-	}
-	else if(l>mid){
+	else if(l>mid)
 		return queryMax(l,h,idx<<1|1);
-	}
 	else
-		return max(queryMax(l,mid,idx<<1),queryMax(mid+1,h,idx<<1|1));		
-	
+		return max(queryMax(l,mid,idx<<1),queryMax(mid+1,h,idx<<1|1));
 }
 
 void update(int l ,int h,int idx,int num){

@@ -26,7 +26,7 @@ int fact[]=
 void build(int l,int r,int idx){
 	nodes[idx].l = l;
 	nodes[idx].r = r;
-	nodes[idx].contr = r-l+1;
+	nodes[idx].contr = r-l+1; //
 	if(l==r) return;
 	int mid = (l+r)>>1;
 	build(l,mid,2*idx);
@@ -38,9 +38,9 @@ int query(int idx,int pos){
 		return nodes[idx].l;
 	}
 	if(pos<=nodes[idx*2].contr)  
-		query(2*idx,pos);
+		return query(2*idx,pos);
 	else  
-		query(2*idx+1,pos-nodes[2*idx].contr);
+		return query(2*idx+1,pos-nodes[2*idx].contr);
 }
 int main(){
 	int n,k;

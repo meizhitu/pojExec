@@ -78,7 +78,6 @@ void update(int left,int right,int id,int state)
 	}
     
 	int mid = (tree[id].left+tree[id].right)>>1;
-
 	if(tree[id].cval == len || tree[id].cval == 0)
 	{
 		int st = 0;

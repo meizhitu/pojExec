@@ -1,6 +1,6 @@
 /*==========================================================*\
-| 划分树
-	\*==========================================================*/
+| 划分树,计算第k大的数，不停的询问数组某个区间的第k大数。
+\*==========================================================*/
 #include <iostream>
 #include <algorithm>
 #include <stdio.h>
@@ -45,6 +45,7 @@ void build_tree(int left, int right, int deep)
 	build_tree(mid + 1, right, deep + 1);
 	printArr(deep,left,right);
 }
+//L，R当前子树的左右idx
 int query(int left, int right, int k, int L, int R, int deep)
 {
 	if (left == right)

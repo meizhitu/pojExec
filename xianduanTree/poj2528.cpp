@@ -1,3 +1,4 @@
+//张贴海报覆盖问题
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
@@ -45,6 +46,7 @@ void insert(int idx,int l,int r,int color){
 		nodes[idx].color = color;
 		return;
 	}
+	//颜色下移，且本身节点颜色清空。
 	if(nodes[idx].color!=0 && nodes[idx].color!=color){
 		nodes[2*idx].color = nodes[idx].color;
 		nodes[2*idx+1].color = nodes[idx].color;
@@ -70,8 +72,6 @@ int preProcess(int * arr,int k,int n){
 		reflect[arr[i]] = contr++;
 		prev = arr[i];
 	}
-	
-	
 	for(int i = 0 ; i<n;i++){
 		inputs[i][0] = reflect[inputs[i][0]];
 		inputs[i][1] =  reflect[inputs[i][1]];

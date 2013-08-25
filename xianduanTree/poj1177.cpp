@@ -55,8 +55,6 @@ void update(int idx,Line e){
 	if( nodes[idx].lLoc == nodes[idx].hLoc - 1 ) return ;
 	
 	//point!!!!!
-	//int mid = (nodes[idx].h+nodes[idx].l)>>1;
-	//	int mid = nodes[idx<<1].h;
 	int mid = (nodes[idx].lLoc+nodes[idx].hLoc)>>1;
 	mid = y[mid];
 	
