@@ -22,7 +22,7 @@ typedef struct TreeNode {
 	TreeNode *right;
 	TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 }TreeNode;
-
+//这道题的关键是说，一定是从根到某个叶子节点的总和为sum
 bool dfs(TreeNode * node,int sum,int pathSum){
 	if(node == 0) return false;
 	if(node->left == 0 && node->right == 0) return  sum == pathSum+node->val;

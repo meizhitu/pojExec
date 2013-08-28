@@ -5,7 +5,7 @@ Return the minimum cuts needed for a palindrome partitioning of s.
 
 For example, given s = "aab",
 Return 1 since the palindrome partitioning ["aa","b"] could be produced using 1 cut.
-	*/
+*/
 //才意识到这个动态规划
 #include <stdio.h>
 #include <string.h>

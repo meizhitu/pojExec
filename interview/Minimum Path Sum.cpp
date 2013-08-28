@@ -17,7 +17,6 @@ int minPathSum(vector<vector<int> > &grid) {
 	for(int i = 1; i<=m;i++)
 		for(int j = 1; j<=n;j++){
 			minV[j] = min(minV[j],minV[j-1])+grid[i-1][j-1];
-		//	cout <<i<<" j "<<j<<" min "<<minV[j]<<endl;
 		}
 		
 	return minV[n];

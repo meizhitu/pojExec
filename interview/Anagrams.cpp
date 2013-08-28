@@ -28,8 +28,8 @@ vector<string> anagrams(vector<string> &strs) {
 int main(){
 	vector<string> strs;
 	strs.push_back("");
-	strs.push_back("");
-	strs.push_back("aaa");
+	strs.push_back("abc");
+	strs.push_back("bac");
 	
 	vector<string> ret = anagrams(strs);
 	cout <<ret.size()<<endl;

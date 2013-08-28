@@ -23,7 +23,8 @@ string minWindow(string S, string T) {
 			countr ++;
  		
 		if(countr == T.size()){
-			while(inT[S[beginPointer]] == 0 ||inS[S[beginPointer]] > inT[S[beginPointer]]){
+			while(inT[S[beginPointer]] == 0 ||
+			inS[S[beginPointer]] > inT[S[beginPointer]]){
 				inS[S[beginPointer]]--;
 				beginPointer ++;
 			}

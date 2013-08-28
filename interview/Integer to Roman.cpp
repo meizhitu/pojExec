@@ -8,7 +8,7 @@ string intToRoman(int num) {
 	int base = 1000;
 	string ret ; 
 	char chars[] = {'I','V','X','L','C','D','M'};
-	for(int i = 6;i>=0;i-=2){
+	for(int i = 6;i>=0;i-=2){//注意此处
 		int digit = num/base;
 		num = num%base;
 		base /= 10;

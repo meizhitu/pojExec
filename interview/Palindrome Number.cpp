@@ -12,7 +12,7 @@ bool isPalindrome(int x) {
 	base /= 10;
 	int ret = 0;
 	while(num){
-		int h = num/base;
+		int h = num/base; //1221 -> 22 
 		int l = num%10;
 		if(h!=l) return false;
 		num = num%base/10;
