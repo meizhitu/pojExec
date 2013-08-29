@@ -1,4 +1,12 @@
 #include <iostream>
+//好吧原来比较正规军的写法是二分。
+double power(double x, int n) {
+	if(n==0) return 1;
+	double v = power(x,n/2);
+	if(n%2==0)return v*v;
+	else
+		return v*v*x;
+}
 //注意几种情况：x=1,-1,无限接近0
 using namespace std;
 double pow(double x, int n) {

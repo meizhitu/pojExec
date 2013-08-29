@@ -26,13 +26,16 @@ typedef struct TreeNode {
 vector<vector<int> > ret;
 void dfs(TreeNode * node,int sum,int pathSum,vector<int> path){
 	if(node == 0) return;
-	
-	if(node->left == 0 && node->right == 0 && sum == pathSum+node->val)
-	{
-		path.push_back(node->val);
-		ret.push_back(path);
+	//走到叶子后，需要判断路径之和是否为sum。否则也应该也返回
+	if(node->left == 0 && node->right == 0){
+		if(sum == pathSum+node->val)
+		{
+			path.push_back(node->val);
+			ret.push_back(path);
+		}	
 		return;
-	}	
+	}
+		
 	//深搜是个试探的过程。
 	path.push_back(node->val);
 	dfs(node->left,sum,pathSum+node->val,path);

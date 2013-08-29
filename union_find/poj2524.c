@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #define MAXSTUDENT 50000
 #define MAXPAIRS 50000*50000/2
-
+//基本并查集
 int find(int x,int * f){
     if(x==f[x]) return x;
     int t = find(f[x],f);

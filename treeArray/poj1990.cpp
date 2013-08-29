@@ -6,7 +6,7 @@
 #define TK(a) (a&(a^(a-1)))
 #define N 20005
 using namespace std;
-
+//牛的音量和距离的问题，根据音量排序。
 struct Node
 {
     long long v,x;

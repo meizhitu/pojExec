@@ -9,7 +9,7 @@ You may assume no duplicate exists in the array.
 
 */
 #include <iostream>
-	using namespace std;
+using namespace std;
 int search(int A[], int n, int target) {
         // Start typing your C/C++ solution below
         // DO NOT write int main() function

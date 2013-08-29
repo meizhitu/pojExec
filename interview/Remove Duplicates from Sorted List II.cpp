@@ -6,6 +6,8 @@ typedef struct ListNode {
      ListNode *next;
      ListNode(int x) : val(x), next(NULL) {}
 }ListNode;
+
+//同样是O(n^2)
 ListNode *deleteDuplicates(ListNode *head) {
 	if(head == 0 )return 0;
 	ListNode * gard = new ListNode(-1);
@@ -29,7 +31,7 @@ ListNode *deleteDuplicates(ListNode *head) {
 			continue;//因为p现在指向的节点尚未检测过，因此直接continue直接进入下一次循环的检验。
 		}
 		//把这部分删了则可以通过Remove Duplicates from Sorted List
-		prev->next = p;
+		prev->next = p; //此处需要注意，因为在删除重复节点的时候，prev和p是断开的。到此处需要将其接上。
 		prev = p;
 		p = p->next;
 	}

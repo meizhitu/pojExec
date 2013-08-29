@@ -21,14 +21,11 @@ void connect(TreeLinkNode *root) {
 		head ++;
 		if(head == levelStart+level){
 			node->next = NULL;
-		//	cout <<node->val<<"=> #"<<endl;
 			levelStart =head;
 			level *=2;
 		}
 		else{
-			node->next = que[head];
-		//	cout <<node->val<<"=> "<<que[head]->val<<endl;
-			
+			node->next = que[head];			
 		}
 		if(node->left){
 			que.push_back(node->left);

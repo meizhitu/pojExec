@@ -11,10 +11,11 @@ bool isMatch(const char *s, const char *p) {
 	}
 	else {
 		while (*p == *s || *p == '.' && (*s) != '\0') {
+			//从匹配0个开始进行试探。
 			if (isMatch(s, p+2)) return true;
-			s++;
+			s++;//将*用作匹配1个以上的字符。
 		}
-		return isMatch(s, p+2);
+		return isMatch(s, p+2); //如果*p!=*s,则*用作忽略前一个字符。
             
 	}
 	int main(){

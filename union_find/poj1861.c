@@ -1,3 +1,4 @@
+//最小生成树问题
 #include <stdlib.h>
 #include <stdio.h>
 #include <algorithm>

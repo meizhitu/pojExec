@@ -1,3 +1,4 @@
+//给出多对关系，判断是否为树。
 #include <iostream>
 #include <stdlib.h>
 #include <stdio.h>

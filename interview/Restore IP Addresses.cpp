@@ -20,7 +20,6 @@ void compute(string s,int startIdx,int partNum,string aIp){
 	//计算到了最后
 	if(startIdx == s.size()&&partNum == 4){
 		aIp.resize(aIp.size()-1);
-		cout<<aIp<<endl;
 		ret.push_back(aIp);
 		return;
 	}

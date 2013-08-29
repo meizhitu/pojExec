@@ -1,3 +1,4 @@
+//给定一个有序数组，移除重复的元素。
 int removeDuplicates(int A[], int n) {
         // Start typing your C/C++ solution below
         // DO NOT write int main() function

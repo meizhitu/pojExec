@@ -1,3 +1,4 @@
+//一个由0，1，2组成的数组，需要按顺序排序。重在思想。
 #include <iostream>
 using namespace std;
 void swap(int A[],int i ,int t){

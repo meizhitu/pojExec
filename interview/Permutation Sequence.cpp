@@ -41,6 +41,7 @@ string computeByMath(int n,int k){
 		permus /= n-i;
 		int choosed = k/permus;
 		ret += nums[choosed]+'0';
+		//这里是比较神奇的。
 		for(int j = choosed;j<n-i;j++)
 			nums[j] = nums[j+1];
 		k = k%permus;

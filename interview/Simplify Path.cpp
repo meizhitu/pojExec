@@ -2,8 +2,6 @@
 #include <stack>
 using namespace std;
 string simplifyPath(string path) {
-	// Start typing your C/C++ solution below
-	// DO NOT write int main() function
 	stack<string> s;
 	string element;
 	element.clear();
