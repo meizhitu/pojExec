@@ -1,3 +1,16 @@
+//给定一个数组S，其中包含重复的元素，算出S所含有的所有子集。
+/*
+If S = [1,2,2], a solution is:
+
+[
+  [2],
+  [1],
+  [1,2,2],
+  [2,2],
+  [1,2],
+  []
+]
+*/
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -13,7 +26,6 @@ void compute(vector<int> &S,int idx,vector<int> aSet){
 		//[1,1]计算完前面的1后，后面的1直接跳过
 		while(i+1<S.size() && S[i]==S[i+1])
 			i++;	
-		
 	}
 }
 vector<vector<int> > subsetsWithDup(vector<int> &S) {

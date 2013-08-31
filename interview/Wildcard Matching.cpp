@@ -10,7 +10,6 @@ bool isMatch(const char *s, const char *p) {
 	const char * ptr = p;
 	bool hasStar = false;
 	for(;*str;str++,ptr++){
-		cout<<*str<<" "<<*ptr<<endl;
 		switch(*ptr){
 			case '?':break;//直接跳过
 			case '*':
@@ -26,7 +25,6 @@ bool isMatch(const char *s, const char *p) {
 			default:
 			if((*str) != (*ptr))
 			{
-				cout <<"not equal"<<endl;
 				if(!hasStar) return false;
 				s++;
 				str = s-1;

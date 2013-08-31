@@ -2,11 +2,12 @@
 #include <vector>
 using namespace std;
 void compute(vector<vector<int> > matrix,vector<int> & ret,int idxI,int idxJ,int lastI,int lastJ){
-	//cout <<"("<<idxI<<","<<idxJ<<"),("<<lastI<<","<<lastJ<<")"<<endl;
+
 	int m =matrix.size();
 	int n = matrix[0].size();
 	if(idxI>lastI ||idxJ > lastJ)
 		return ;
+	//单独处理最后一行
 	if(idxI==lastI){
 		for(int i =idxJ;i<=lastJ;i++)
 			ret.push_back(matrix[idxI][i]);

@@ -1,16 +1,12 @@
 #include <iostream>   
-    
-    /**
+/**
     Given n, how many structurally unique BST's (binary search trees) that store values 1...n?
 
     For example,
     Given n = 3, there are a total of 5 unique BST's.
-        3     3      2      1
-        \       /     /      / \      \
-    2     1      1   3      2
-        /     /       \                 \
-    1         2                 3
-				dp[i] 表示节点个数为i的树的种类数。
+      
+	
+	dp[i] 表示节点个数为i的树的种类数。
 	dp[0] = 1; dp[1] = 1;
     
 	
@@ -22,7 +18,7 @@
     dp[n] = sigma{i = 0..n-1} dp[i]*dp[n-1-i]
     
     其实就是说白了考虑左右子tree的大小就ok，因为大小暗含了这个时候根结点的情况，所以和枚举根结点从1...n是一样的
-    */
+*/
 	int numTrees(int n){
 		int *dp = new int[n + 1];
 		memset(dp,0,sizeof(int)*(n + 1));
@@ -33,7 +29,7 @@
 			}
 		}
 		int ans = dp[n];
- 		delete dp;
+		delete dp;
 		return ans;
 	}
 

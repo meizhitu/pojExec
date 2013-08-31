@@ -86,7 +86,6 @@ void solve(vector<vector<char> > &board) {
 	}
 }
 int main(){
-	//freopen("a.txt","r",stdin);
 	vector<vector<char> > board;
 	for(int i = 0 ; i< 4;i++)
 	{

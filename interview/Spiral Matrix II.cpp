@@ -1,3 +1,12 @@
+/*
+Spiral Matrix II,一个矩阵还有元素从1，n^2,求螺旋矩阵。
+	[
+	 [ 1, 2, 3 ],
+	 [ 8, 9, 4 ],
+	 [ 7, 6, 5 ]
+	]
+
+*/
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -5,6 +14,7 @@ vector<vector<int> > retV;
 void compute(int start,int idxI,int idxJ,int lastI,int lastJ){
 	if(idxI>lastI ||idxJ > lastJ)
 		return ;
+	//注意最后一行或一列的情况。
 	if(idxI==lastI){
 		for(int i =idxJ;i<=lastJ;i++)
 			retV[idxI][i] = start++;
@@ -17,7 +27,6 @@ void compute(int start,int idxI,int idxJ,int lastI,int lastJ){
 	}
 	int i = idxI ,j = idxJ;
 	while(j<=lastJ){
-	//	ret.push_back(matrix[i][j]);
 		retV[i][j] = start++;
 		j++;
 	}

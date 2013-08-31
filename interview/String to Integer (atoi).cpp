@@ -5,8 +5,10 @@ int atoi(const char *str) {
        // Start typing your C/C++ solution below
        // DO NOT write int main() function
 	if(str==0|| *str=='\0') return 0;
+	//排序前面的空格
 	while(*str && *str==' ') str++;
 	int isNeg = 1;
+	//判断前面的符号
 	if(*str=='+')str++;
 	if(*str=='-'){
 		isNeg = -1;
@@ -17,7 +19,6 @@ int atoi(const char *str) {
 	for(;*p;p++){
 		if(!(*p>='0'&&*p<='9')) return isNeg*ret;
 		ret = 10*ret +(*p-'0');
-		cout <<"ret "<<ret<<endl;
 		if(isNeg*ret>INT_MAX) return INT_MAX;
 		if(isNeg*ret<INT_MIN) return INT_MIN;
 	}
